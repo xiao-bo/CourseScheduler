@@ -1,3 +1,4 @@
+import pandas as pd
 from libs.google.google_sheet_controller import GoogleSheetController as GSC
 from libs.schedule.class_schedule import ClassSchedule
 from libs.schedule.teacher_schedule import TeacherSchedule
@@ -18,11 +19,11 @@ class Scheduler(object):
 
     def build_class_schedule(self):
         self.__read_teacher_subject()
-        #self.gsc.runner()        
+        #self.gsc.read_google_sheet()        
         #self.class_schedule.runner()
         #self.TeacherSchedule.runner()
         self.ScheduleBuilder.runner()
-        
+
     def transfer_class_schedule_to_teacher_schedule(self):
         pass
 
